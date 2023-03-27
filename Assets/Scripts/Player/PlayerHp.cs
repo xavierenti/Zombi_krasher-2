@@ -30,9 +30,18 @@ public class PlayerHp : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+           
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.CompareTag("Enemy"))
+        {
             playerHP = -1;
             if (playerHP <= 0)
             {
+                Destroy(gameObject);
                 SceneManager.LoadScene("DeathScene");
                 Cursor.visible = true;
             }
