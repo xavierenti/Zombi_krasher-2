@@ -34,6 +34,8 @@ public class EnemyDamage : MonoBehaviour
 
     private bool hasSanguinary;
 
+    [SerializeField] int experience_reward = 400;
+
     private void Start()
     {
 
@@ -87,7 +89,11 @@ public class EnemyDamage : MonoBehaviour
             timer += Time.deltaTime;
 
             currentKills = +1;
+
+            player.GetComponent<Level>().AddExpirience(experience_reward);
+
             Destroy(gameObject);
+                        
             
         }
     }
