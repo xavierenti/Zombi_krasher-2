@@ -11,7 +11,7 @@ public enum UpgradeType
 }
 [CreateAssetMenu]
 
-public class UpgradeData : MonoBehaviour
+public class UpgradeData : ScriptableObject
 {
    public UpgradeType upgradeType;
    public string Name;
