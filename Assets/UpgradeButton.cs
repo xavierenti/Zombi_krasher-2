@@ -11,4 +11,9 @@ public class UpgradeButton : MonoBehaviour
     {
         icon.sprite = upgradeData.icon;
     }
+
+    internal void Clean()
+    {
+        icon.sprite = null;
+    }
 }

@@ -10,6 +10,10 @@ public class Level : MonoBehaviour
     [SerializeField] UpgradePanelManager UpgradePanel;
 
     [SerializeField] List<UpgradeData> upgrades;
+    List<UpgradeData> selectedUpgrades;
+
+    [SerializeField]List<UpgradeData> acquiredUpgrades;
+    
 
     int TO_LEVEL_UP
     {
@@ -32,6 +36,19 @@ public class Level : MonoBehaviour
         experienceBar.UpdateExperienceSlider(experience, TO_LEVEL_UP);
     }
 
+    public void Upgrade (int selectedUpgradeId)
+    {
+        UpgradeData upgradeData = selectedUpgrades[selectedUpgradeId];
+
+        if (acquiredUpgrades == null)
+        {
+            acquiredUpgrades = new List<UpgradeData>();
+        }
+
+        acquiredUpgrades.Add(upgradeData);
+        upgrades.Remove(upgradeData);
+    }
+
     public void CheckLevelUp()
     {
         if(experience >= TO_LEVEL_UP)
@@ -42,7 +59,11 @@ public class Level : MonoBehaviour
 
     public void LevelUp()
     {
-        UpgradePanel.OpenPanel(GetUpgrades(3));
+        if(selectedUpgrades == null) { selectedUpgrades = new List<UpgradeData>(); }
+        selectedUpgrades.Clear();
+        selectedUpgrades.AddRange(GetUpgrades(3));
+
+        UpgradePanel.OpenPanel(selectedUpgrades);
         experience -= TO_LEVEL_UP;
         level += 1;
         experienceBar.SetLevelText(level);
