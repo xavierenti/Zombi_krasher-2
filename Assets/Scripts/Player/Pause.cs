@@ -8,6 +8,7 @@ public class Pause : MonoBehaviour
 
     public bool IsPaused = false;
     public GameObject pauseMenu;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,7 @@ public class Pause : MonoBehaviour
         }
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         Time.timeScale = 0f;
         IsPaused = true;
