@@ -28,10 +28,12 @@ public class PlayerMovement : MonoBehaviour
     private KeyCode horizontalKeyPressed;
     private KeyCode verticalKeyPressed;
 
+    private Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        animator = GetComponent<Animator>();
         aux = speed;
 
         normalCameraSize = mainCamera.orthographicSize;

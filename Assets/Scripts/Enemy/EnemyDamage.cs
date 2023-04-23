@@ -30,7 +30,9 @@ public class EnemyDamage : MonoBehaviour
 
     public Text text;
     public float startingKills = 0;
-    public float currentKills = 0;  
+    public float currentKills = 0;
+
+    public GameObject blood;
 
     private bool hasSanguinary;
 
@@ -92,21 +94,27 @@ public class EnemyDamage : MonoBehaviour
 
             player.GetComponent<Level>().AddExpirience(experience_reward);
 
+            audioSource.PlayOneShot(deathSound);
             Destroy(gameObject);
-                        
-            
         }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
 
         if (other.CompareTag("Bullet"))
         {
+
             enemyHP--;
+            
             if (enemyHP <= 0)
             {
+
                 Destroy(gameObject);
+                Instantiate(blood, transform.position, Quaternion.identity);
                 ScoreManager.instance.AddPoint();
+                
+
             }
         }
     }
