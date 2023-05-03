@@ -113,7 +113,7 @@ public class EnemyDamage : MonoBehaviour
                 Destroy(gameObject);
                 Instantiate(blood, transform.position, Quaternion.identity);
                 ScoreManager.instance.AddPoint();
-                
+                ScoreManager.instance.AddGold();
 
             }
         }

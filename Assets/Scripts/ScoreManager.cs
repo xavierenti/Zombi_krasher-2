@@ -9,9 +9,11 @@ public class ScoreManager : MonoBehaviour
     
     public Text scoreText;
     public Text highscroeText;
+    public Text goldText;
 
     int score = 0;
     int highscore = 0;
+    int gold = 0;
 
     private void Awake()
     {
@@ -24,6 +26,7 @@ public class ScoreManager : MonoBehaviour
         highscore = PlayerPrefs.GetInt("highscore", 0);
         scoreText.text = "Points: " + score.ToString() ;
         highscroeText.text = "Highscore: " + highscore.ToString();
+        goldText.text = "Gold: " + gold.ToString();
     }
 
     public void AddPoint()
@@ -34,6 +37,12 @@ public class ScoreManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("highscore", score);
         }
+        
+    }
+    public void AddGold()
+    {
+        gold += 10;
+        scoreText.text = score.ToString() + " Gold";
         
     }
 

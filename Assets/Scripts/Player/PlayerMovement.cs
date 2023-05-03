@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IShopCostumer
 {
     public float speed = 5f;
 
@@ -26,5 +26,10 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
+    }
+
+    public void BoughtItem(Item.ItemType itemType)
+    {
+        Debug.Log("Compra item: " + itemType);
     }
 }
