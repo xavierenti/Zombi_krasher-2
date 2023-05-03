@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9103173534012980075, guid: 72bc0927b62bdd64f8888797fb44ea83, type: 3}
       propertyPath: m_Name
-      value: Walk_000
+      value: Walk_000 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9103173534012980078, guid: 72bc0927b62bdd64f8888797fb44ea83, type: 3}
       propertyPath: m_RootOrder
@@ -93,9 +93,12 @@ MonoBehaviour:
   called: 0
   death: 0
   decreaseSpeed: 0
+  bloodPrefab: {fileID: 8306400626116460650, guid: 32757df4d1192434ba6c24c2ffc85f58, type: 3}
   text: {fileID: 0}
   startingKills: 0
   currentKills: 0
+  blood: {fileID: 0}
+  experience_reward: 400
 --- !u!114 &1424699818
 MonoBehaviour:
   m_ObjectHideFlags: 0

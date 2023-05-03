@@ -11,6 +11,7 @@ public class EnemyDamage : MonoBehaviour
 
     private float timer;
 
+
     private SpriteRenderer spriteRenderer;
 
     private AudioSource audioSource;
@@ -22,6 +23,8 @@ public class EnemyDamage : MonoBehaviour
     public bool death;
     [HideInInspector]
     public bool decreaseSpeed;
+
+    public GameObject bloodPrefab;
 
     private Rigidbody2D rb;
 
@@ -109,11 +112,14 @@ public class EnemyDamage : MonoBehaviour
             
             if (enemyHP <= 0)
             {
+                Instantiate(bloodPrefab, transform.position, Quaternion.identity);
 
                 Destroy(gameObject);
                 Instantiate(blood, transform.position, Quaternion.identity);
                 ScoreManager.instance.AddPoint();
                 ScoreManager.instance.AddGold();
+
+
 
             }
         }
