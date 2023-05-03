@@ -102,7 +102,7 @@ public class EnemyDamage : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.CompareTag("Bullet"))
+        if (other.CompareTag("Bullet_gun"))
         {
 
             enemyHP--;
@@ -114,6 +114,21 @@ public class EnemyDamage : MonoBehaviour
                 Instantiate(blood, transform.position, Quaternion.identity);
                 ScoreManager.instance.AddPoint();
                 
+
+            }
+        }
+
+        if(other.CompareTag("bullet_rifle"))
+        {
+            enemyHP -= 2;
+
+            if (enemyHP <= 0)
+            {
+
+                Destroy(gameObject);
+                Instantiate(blood, transform.position, Quaternion.identity);
+                ScoreManager.instance.AddPoint();
+
 
             }
         }

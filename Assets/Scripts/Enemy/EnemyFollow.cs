@@ -25,14 +25,4 @@ public class EnemyFollow : MonoBehaviour
         direction.Normalize();
         movement = direction;
     }
-
-    private void FixedUpdate()
-    {
-        moveCharacter(movement);
-    }
-
-    void moveCharacter(Vector2 direction)
-    {
-        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
-    }
 }

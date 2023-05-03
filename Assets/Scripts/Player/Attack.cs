@@ -9,6 +9,8 @@ public class Attack : MonoBehaviour
     
     public GameObject Bullet;
 
+    public GameObject bullet_rifle;
+
     public GameObject flameParticle;
 
 
@@ -24,9 +26,9 @@ public class Attack : MonoBehaviour
 
     private float ReadyForTheNextShot;
 
-    bool pistol = true;
+    bool pistol = false;
 
-    bool rifle = false;
+    bool rifle = true;
 
     bool flame = false;
 
@@ -51,7 +53,7 @@ public class Attack : MonoBehaviour
             {
                 
                 animator.SetBool("isGunShooting", true);
-                shoot();
+                shoot_gun();
                 audioSource.PlayOneShot(shootSound);
                 
             }
@@ -72,7 +74,7 @@ public class Attack : MonoBehaviour
 
                     animator.SetBool("isRiffleShooting", true);
                     ReadyForTheNextShot = Time.time + 1 / fireRate;
-                    shoot();
+                    shoot_rifle();
                     audioSource.PlayOneShot(shootSound);
                 }
 
@@ -105,9 +107,16 @@ public class Attack : MonoBehaviour
         
     }
 
-    void shoot()
+    void shoot_gun()
     {
         GameObject bullet = Instantiate(Bullet, weapon.position, weapon.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(weapon.right * bulletSpeed, ForceMode2D.Impulse);
+    }
+
+    void shoot_rifle()
+    {
+        GameObject bullet = Instantiate(bullet_rifle, weapon.position, weapon.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(weapon.right * bulletSpeed, ForceMode2D.Impulse);
     }
