@@ -10,6 +10,7 @@ public class shopManager : MonoBehaviour
     public GameObject shopMenu;
     public GameObject buttonBuyGun;
     public GameObject player;
+   public ScoreManager score;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,11 +26,13 @@ public class shopManager : MonoBehaviour
             if (IsShopOpen)
             {
                 shopMenu.SetActive(false);
+
                 IsShopOpen = false;
             }
             else
             {
                 shopMenu.SetActive(true);
+                
                 IsShopOpen = true;
             }
         }
@@ -49,7 +52,7 @@ public class shopManager : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void buyGun(Attack attack, ScoreManager score)
+    public void buyGun(Attack attack)
     {
         if(score.gold >= 100)
         {
@@ -57,10 +60,7 @@ public class shopManager : MonoBehaviour
             attack.pistol = false;
             attack.rifle = true;
             attack.flame = false;
-            score.gold -= 100;
+            ScoreManager.instance.LoseGold(100);
         }
-        
-
-        
     }
 }

@@ -46,6 +46,13 @@ public class ScoreManager : MonoBehaviour
         
     }
 
+    public void LoseGold(int cost)
+    {
+        gold -= cost;
+        goldText.text = "Gold: " + gold.ToString();
+
+    }
+
     // Update is called once per frame
     void Update()
     {

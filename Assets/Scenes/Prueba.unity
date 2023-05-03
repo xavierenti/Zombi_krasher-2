@@ -10257,7 +10257,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: eead6ee5163cdc943b988e0a6e3a3f0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -24677,6 +24677,7 @@ MonoBehaviour:
   shopMenu: {fileID: 233601741}
   buttonBuyGun: {fileID: 620759902}
   player: {fileID: 1185069298}
+  score: {fileID: 1049125997}
 --- !u!114 &2007526441
 MonoBehaviour:
   m_ObjectHideFlags: 0
