@@ -22,39 +22,39 @@ public class Ui_Shop : MonoBehaviour
         
     }
 
-    private void CreateItemButton(Item.ItemType itemType, Sprite itemSprite, string itemName, int itemCost, int positionIndex)
-    {
-        Transform shopItemTransform = Instantiate(shopItemTemplate, container);
-        shopItemTransform.gameObject.SetActive(true);
-        RectTransform shopItemReactTransform = shopItemTransform.GetComponent<RectTransform>();
+    //private void CreateItemButton(Item.ItemType itemType, Sprite itemSprite, string itemName, int itemCost, int positionIndex)
+    //{
+    //    Transform shopItemTransform = Instantiate(shopItemTemplate, container);
+    //    shopItemTransform.gameObject.SetActive(true);
+    //    RectTransform shopItemReactTransform = shopItemTransform.GetComponent<RectTransform>();
 
-        float shopItemHeight = 30f;
-        shopItemReactTransform.anchoredPosition = new Vector2(0, -shopItemHeight * positionIndex);
+    //    float shopItemHeight = 30f;
+    //    shopItemReactTransform.anchoredPosition = new Vector2(0, -shopItemHeight * positionIndex);
 
-        shopItemTransform.Find("itemName").GetComponent<TextMeshProUGUI>().SetText(itemName);
-        shopItemTransform.Find("costText").GetComponent<TextMeshProUGUI>().SetText(itemCost.ToString());
+    //    shopItemTransform.Find("itemName").GetComponent<TextMeshProUGUI>().SetText(itemName);
+    //    shopItemTransform.Find("costText").GetComponent<TextMeshProUGUI>().SetText(itemCost.ToString());
 
-        shopItemTransform.Find("itemImage").GetComponent<Image>().sprite=itemSprite;
+    //    shopItemTransform.Find("itemImage").GetComponent<Image>().sprite=itemSprite;
 
-        shopItemTransform.GetComponent<Button_UI>()ClickFun = () =>
-        {
-            TryBuyItem(itemType);
-        };
-    }
-    private void TryBuyItem(ContextMenuItemAttribute.ItemType itemType)
-    {
-        shopCustomer.BoughtItem(itemType);
-    }
+    //    shopItemTransform.GetComponent<Button_UI>()ClickFun = () =>
+    //    {
+    //        TryBuyItem(itemType);
+    //    };
+    //}
+    //private void TryBuyItem(ContextMenuItemAttribute.ItemType itemType)
+    //{
+    //    shopCustomer.BoughtItem(itemType);
+    //}
    
-    public void show (IShopCustomer shopCustomer)
-    {
-        this shopCustomer = shopCustomer;
-        gameObject.SetActive(true);
-    }
+    //public void show (IShopCustomer shopCustomer)
+    //{
+    //    this shopCustomer = shopCustomer;
+    //    gameObject.SetActive(true);
+    //}
 
-    public void Hide()
-    {
-        GameObject.SetActive(false);
-    }
+    //public void Hide()
+    //{
+    //    GameObject.SetActive(false);
+    //}
 
 }

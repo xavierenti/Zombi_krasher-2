@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IShopCostumer 
 {
-    void BoughtItem (Item.ItemType itemType)
+    //void BoughtItem (Item.ItemType itemType)
 }

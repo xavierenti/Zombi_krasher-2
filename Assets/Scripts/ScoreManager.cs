@@ -42,7 +42,7 @@ public class ScoreManager : MonoBehaviour
     public void AddGold()
     {
         gold += 10;
-        scoreText.text = score.ToString() + " Gold";
+        goldText.text = score.ToString() + " Gold";
         
     }
 

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,11 +27,11 @@ public class Attack : MonoBehaviour
 
     private float ReadyForTheNextShot;
 
-    bool pistol = false;
+    public bool pistol = true;
 
-    bool rifle = true;
+    public bool rifle = false;
 
-    bool flame = false;
+    public bool flame = false;
 
 
 
@@ -38,6 +39,7 @@ public class Attack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
     }
@@ -72,7 +74,7 @@ public class Attack : MonoBehaviour
                 if(Time.time > ReadyForTheNextShot)
                 {
 
-                    animator.SetBool("isRiffleShooting", true);
+                    animator.SetBool("haveRifle", true);
                     ReadyForTheNextShot = Time.time + 1 / fireRate;
                     shoot_rifle();
                     audioSource.PlayOneShot(shootSound);

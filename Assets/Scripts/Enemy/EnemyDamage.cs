@@ -102,7 +102,7 @@ public class EnemyDamage : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.CompareTag("Bullet_gun"))
+        if (other.CompareTag("Bullet"))
         {
 
             enemyHP--;

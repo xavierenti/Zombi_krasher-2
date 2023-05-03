@@ -27,9 +27,4 @@ public class PlayerMovement : MonoBehaviour, IShopCostumer
     {
         rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
     }
-
-    public void BoughtItem(Item.ItemType itemType)
-    {
-        Debug.Log("Compra item: " + itemType);
-    }
 }
