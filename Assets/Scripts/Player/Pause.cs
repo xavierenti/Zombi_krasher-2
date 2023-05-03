@@ -66,6 +66,6 @@ public class Pause : MonoBehaviour
 
     public void ExitGame()
     {
-        SceneManager.LoadScene("MainMenu");
+        Application.Quit();
     }
 }
