@@ -7,11 +7,17 @@ public class PlayerHp : MonoBehaviour
 {
     public int playerHP;
 
+    public GameObject death;
+
     //private bool damaged;
     private float timer;
 
     private int maxHP;
 
+    private void Start()
+    {
+        death.SetActive(false);
+    }
     void Update()
     {
         //if (damaged)
@@ -42,7 +48,8 @@ public class PlayerHp : MonoBehaviour
             if (playerHP <= 0)
             {
                 Destroy(gameObject);
-                SceneManager.LoadScene("DeathScene");
+                Time.timeScale = 0f;
+                death.SetActive(true);
                 Cursor.visible = true;
             }
         }

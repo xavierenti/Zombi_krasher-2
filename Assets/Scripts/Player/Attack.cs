@@ -75,7 +75,7 @@ public class Attack : MonoBehaviour
                 {
 
                     animator.SetBool("haveRifle", true);
-                    ReadyForTheNextShot = Time.time + 1 / fireRate;
+                    ReadyForTheNextShot = Time.time + 0.5f / fireRate;
                     shoot_rifle();
                     audioSource.PlayOneShot(shootSound);
                 }

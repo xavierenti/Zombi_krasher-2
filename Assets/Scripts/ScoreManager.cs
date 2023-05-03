@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour
 
     int score = 0;
     int highscore = 0;
-    int gold = 0;
+   public int gold = 0;
 
     private void Awake()
     {
@@ -42,7 +42,7 @@ public class ScoreManager : MonoBehaviour
     public void AddGold()
     {
         gold += 10;
-        goldText.text = score.ToString() + " Gold";
+        goldText.text = "Gold: " + gold.ToString();
         
     }
 

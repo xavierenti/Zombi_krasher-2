@@ -49,12 +49,18 @@ public class shopManager : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void buyGun(Attack attack)
+    public void buyGun(Attack attack, ScoreManager score)
     {
-        Destroy(buttonBuyGun);
-        attack.pistol = false;
-        attack.rifle = true;
-        attack.flame = false;
+        if(score.gold >= 100)
+        {
+            Destroy(buttonBuyGun);
+            attack.pistol = false;
+            attack.rifle = true;
+            attack.flame = false;
+            score.gold -= 100;
+        }
+        
+
         
     }
 }
