@@ -9,6 +9,7 @@ public class shopManager : MonoBehaviour
 
     public GameObject shopMenu;
     public GameObject buttonBuyGun;
+    public GameObject buttonFireRate;
     public GameObject player;
    public ScoreManager score;
     // Start is called before the first frame update
@@ -61,6 +62,22 @@ public class shopManager : MonoBehaviour
             attack.rifle = true;
             attack.flame = false;
             ScoreManager.instance.LoseGold(100);
+        }
+    }
+
+    public void buyFireRateRifle(Attack attack)
+    {
+        if(score.gold >= 300)
+        {
+            if(attack.fireRateRifle >= 0.5)
+            {
+                
+                attack.fireRateRifle -= 0.1f;
+                ScoreManager.instance.LoseGold(250);
+            }
+            else
+                Destroy(buttonFireRate);
+
         }
     }
 }

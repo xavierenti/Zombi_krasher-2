@@ -32,7 +32,7 @@ public class Attack : MonoBehaviour
     public bool rifle = false;
 
     public bool flame = false;
-
+    public float fireRateRifle = 1f;
 
 
     private float bulletSpeed = 20f;
@@ -75,7 +75,7 @@ public class Attack : MonoBehaviour
                 {
 
                     animator.SetBool("haveRifle", true);
-                    ReadyForTheNextShot = Time.time + 0.5f / fireRate;
+                    ReadyForTheNextShot = Time.time + fireRateRifle / fireRate;
                     shoot_rifle();
                     audioSource.PlayOneShot(shootSound);
                 }
