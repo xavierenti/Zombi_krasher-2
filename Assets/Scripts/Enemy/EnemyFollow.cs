@@ -5,7 +5,10 @@ using UnityEngine;
 public class EnemyFollow : MonoBehaviour
 {
 
-    public Transform player;
+    
+
+    public GameObject player;
+
     public float moveSpeed = 5;
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -19,7 +22,8 @@ public class EnemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = player.position - transform.position;
+        player = GameObject.FindGameObjectWithTag("Player");
+        Vector3 direction = player.transform.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle + 90;
         direction.Normalize();

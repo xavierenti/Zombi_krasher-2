@@ -6,9 +6,12 @@ using UnityEngine.AI;
 public class EnemyIA : MonoBehaviour
 {
 
-    [SerializeField] private Transform player;
+    [SerializeField] 
     private Rigidbody2D rb;
     private NavMeshAgent navMeshAgent;
+
+    public GameObject player;
+    
 
 
     // Start is called before the first frame update
@@ -22,7 +25,8 @@ public class EnemyIA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        navMeshAgent.SetDestination(player.position);
+        player = GameObject.FindGameObjectWithTag("Player");
+        navMeshAgent.SetDestination(player.transform.position);
+       
     }
 }
