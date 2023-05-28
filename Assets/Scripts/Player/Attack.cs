@@ -34,8 +34,10 @@ public class Attack : MonoBehaviour
     public bool flame = false;
     public float fireRateRifle = 1f;
 
+    public float criticInstaKill = 0f;
 
-    private float bulletSpeed = 20f;
+
+    public float bulletSpeed = 20f;
     // Start is called before the first frame update
     void Start()
     {

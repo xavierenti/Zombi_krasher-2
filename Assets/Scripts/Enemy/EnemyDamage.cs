@@ -30,6 +30,7 @@ public class EnemyDamage : MonoBehaviour
 
     private GameObject player;
     private PlayerDamage playerDamage;
+    private Attack attack;
 
     public Text text;
     public float startingKills = 0;
@@ -90,7 +91,7 @@ public class EnemyDamage : MonoBehaviour
         if (death || enemyHP <= 0)
         {
             spriteRenderer.enabled = false;
-            
+
             timer += Time.deltaTime;
 
             currentKills = +1;
@@ -108,9 +109,7 @@ public class EnemyDamage : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
 
-            enemyHP--;
-            
-            if (enemyHP <= 0)
+            if (Random.Range(1, 101) == attack.criticInstaKill)
             {
                 Instantiate(bloodPrefab, transform.position, Quaternion.identity);
 
@@ -118,25 +117,55 @@ public class EnemyDamage : MonoBehaviour
                 Instantiate(blood, transform.position, Quaternion.identity);
                 ScoreManager.instance.AddPoint();
                 ScoreManager.instance.AddGold();
+            }
+            else
+            {
+                enemyHP--;
+
+                if (enemyHP <= 0)
+                {
+                    Instantiate(bloodPrefab, transform.position, Quaternion.identity);
+
+                    Destroy(gameObject);
+                    Instantiate(blood, transform.position, Quaternion.identity);
+                    ScoreManager.instance.AddPoint();
+                    ScoreManager.instance.AddGold();
 
 
 
+                }
             }
         }
 
-        if(other.CompareTag("bullet_rifle"))
+        if (other.CompareTag("bullet_rifle"))
         {
-            enemyHP -= 2;
 
-            if (enemyHP <= 0)
+
+            if (Random.Range(1, 101) == attack.criticInstaKill)
             {
+                Instantiate(bloodPrefab, transform.position, Quaternion.identity);
 
                 Destroy(gameObject);
                 Instantiate(blood, transform.position, Quaternion.identity);
                 ScoreManager.instance.AddPoint();
                 ScoreManager.instance.AddGold();
+            }
 
 
+            else
+            {
+                enemyHP -= 2;
+
+                if (enemyHP <= 0)
+                {
+
+                    Destroy(gameObject);
+                    Instantiate(blood, transform.position, Quaternion.identity);
+                    ScoreManager.instance.AddPoint();
+                    ScoreManager.instance.AddGold();
+
+
+                }
             }
         }
     }
