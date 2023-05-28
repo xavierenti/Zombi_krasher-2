@@ -109,17 +109,17 @@ public class EnemyDamage : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
 
-            if (Random.Range(1, 101) == attack.criticInstaKill)
-            {
-                Instantiate(bloodPrefab, transform.position, Quaternion.identity);
+            //if (Random.Range(1, 101) == attack.criticInstaKill)
+            //{
+            //    Instantiate(bloodPrefab, transform.position, Quaternion.identity);
 
-                Destroy(gameObject);
-                Instantiate(blood, transform.position, Quaternion.identity);
-                ScoreManager.instance.AddPoint();
-                ScoreManager.instance.AddGold();
-            }
-            else
-            {
+            //    Destroy(gameObject);
+            //    Instantiate(blood, transform.position, Quaternion.identity);
+            //    ScoreManager.instance.AddPoint();
+            //    ScoreManager.instance.AddGold();
+            //}
+            //else
+            //{
                 enemyHP--;
 
                 if (enemyHP <= 0)
@@ -134,26 +134,26 @@ public class EnemyDamage : MonoBehaviour
 
 
                 }
-            }
+           // }
         }
 
         if (other.CompareTag("bullet_rifle"))
         {
 
 
-            if (Random.Range(1, 101) == attack.criticInstaKill)
-            {
-                Instantiate(bloodPrefab, transform.position, Quaternion.identity);
+            //if (Random.Range(1, 101) == attack.criticInstaKill)
+            //{
+            //    Instantiate(bloodPrefab, transform.position, Quaternion.identity);
 
-                Destroy(gameObject);
-                Instantiate(blood, transform.position, Quaternion.identity);
-                ScoreManager.instance.AddPoint();
-                ScoreManager.instance.AddGold();
-            }
+            //    Destroy(gameObject);
+            //    Instantiate(blood, transform.position, Quaternion.identity);
+            //    ScoreManager.instance.AddPoint();
+            //    ScoreManager.instance.AddGold();
+            //}
 
 
-            else
-            {
+            //else
+            //{
                 enemyHP -= 2;
 
                 if (enemyHP <= 0)
@@ -166,7 +166,7 @@ public class EnemyDamage : MonoBehaviour
 
 
                 }
-            }
+            //}
         }
     }
 

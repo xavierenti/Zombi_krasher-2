@@ -7,6 +7,7 @@ public class Attack : MonoBehaviour
 {
     
     public Transform weapon;
+    public Transform secondWeapon;
     
     public GameObject Bullet;
 
@@ -36,6 +37,8 @@ public class Attack : MonoBehaviour
 
     public float criticInstaKill = 0f;
 
+    public bool isBought = false;
+
 
     public float bulletSpeed = 20f;
     // Start is called before the first frame update
@@ -58,6 +61,10 @@ public class Attack : MonoBehaviour
                 
                 animator.SetBool("isGunShooting", true);
                 shoot_gun();
+                if(isBought)
+                {
+                    DoubleBulletPistol();
+                }
                 audioSource.PlayOneShot(shootSound);
                 
             }
@@ -79,6 +86,10 @@ public class Attack : MonoBehaviour
                     animator.SetBool("haveRifle", true);
                     ReadyForTheNextShot = Time.time + fireRateRifle / fireRate;
                     shoot_rifle();
+                    if(!isBought)
+                    {
+                        DoubleBulletRifle();
+                    }
                     audioSource.PlayOneShot(shootSound);
                 }
 
@@ -117,11 +128,24 @@ public class Attack : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(weapon.right * bulletSpeed, ForceMode2D.Impulse);
     }
+    void DoubleBulletPistol()
+    {
+        GameObject bullet = Instantiate(Bullet, secondWeapon.position, secondWeapon.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(secondWeapon.right * bulletSpeed, ForceMode2D.Impulse);
+    }
 
     void shoot_rifle()
     {
         GameObject bullet = Instantiate(bullet_rifle, weapon.position, weapon.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(weapon.right * bulletSpeed, ForceMode2D.Impulse);
+    }
+
+    void DoubleBulletRifle()
+    {
+        GameObject bullet = Instantiate(bullet_rifle, secondWeapon.position, secondWeapon.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(secondWeapon.right * bulletSpeed, ForceMode2D.Impulse);
     }
 }

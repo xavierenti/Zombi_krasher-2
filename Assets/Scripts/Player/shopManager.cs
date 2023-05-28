@@ -121,4 +121,13 @@ public class shopManager : MonoBehaviour
             ScoreManager.instance.LoseGold(2500);
         }
     }
+
+    public void BuyDoubleShoot(Attack at)
+    {
+        if(score.gold >= 1)
+        {
+            at.isBought = true;
+            ScoreManager.instance.LoseGold(1);
+        }
+    }
 }
