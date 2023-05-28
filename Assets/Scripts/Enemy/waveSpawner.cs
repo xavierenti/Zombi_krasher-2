@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class waveSpawner : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class waveSpawner : MonoBehaviour
         public float rate;
     }
 
-
+    public GameObject textShop;
    
 
     public Wave[] waves;
@@ -34,6 +35,7 @@ public class waveSpawner : MonoBehaviour
     private void Start()
     {
         waveCountDown = timeBetweenWaves;
+        textShop.SetActive(false);
 
 
     }
@@ -72,6 +74,7 @@ public class waveSpawner : MonoBehaviour
     void WaveCompleted()
     {
         state = SpawnState.COUTING;
+        textShop.SetActive(true);
         waveCountDown = timeBetweenWaves;
 
         if(nextWave + 1 > waves.Length - 1)
@@ -121,7 +124,7 @@ public class waveSpawner : MonoBehaviour
     void SpawnEnemy(Transform _enemy)
     {
         //Spawn enemy
-        
+        textShop.SetActive(false);
         Debug.Log("Spawning enemy: " + _enemy.name);
         Transform _sp = spawnPoints[ Random.Range(0, spawnPoints.Length) ];
         Instantiate(_enemy, _sp.position, transform.rotation);

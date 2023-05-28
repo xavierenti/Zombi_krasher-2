@@ -15,6 +15,7 @@ public class Attack : MonoBehaviour
 
     public GameObject flameParticle;
 
+    public Pause pause;
 
     private AudioSource audioSource;
 
@@ -33,7 +34,8 @@ public class Attack : MonoBehaviour
     public bool rifle = false;
 
     public bool flame = false;
-    public float fireRateRifle = 1f;
+    public float fireRateRifle = 1;
+    public float fireRatePistol = 0.35f;
 
     public float criticInstaKill = 0f;
 
@@ -52,73 +54,77 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if(pistol)
+        if(!pause.IsPaused)
         {
-            animator.SetBool("isGun", true);
-            if (Input.GetMouseButtonDown(0))
+            if (pistol)
             {
-                
-                animator.SetBool("isGunShooting", true);
-                shoot_gun();
-                if(isBought)
-                {
-                    DoubleBulletPistol();
-                }
-                audioSource.PlayOneShot(shootSound);
-                
-            }
-
-            if(Input.GetMouseButtonUp(0))
-            {
-                animator.SetBool("isGunShooting", false);
-            }
-            
-        }
-        if(rifle)
-        {
-            animator.SetBool("haveRifle", true);
-            if (Input.GetMouseButton(0))
-            {
-                if(Time.time > ReadyForTheNextShot)
+                animator.SetBool("isGun", true);
+                if (Input.GetMouseButtonDown(0))
                 {
 
-                    animator.SetBool("haveRifle", true);
+                    animator.SetBool("isGunShooting", true);
                     ReadyForTheNextShot = Time.time + fireRateRifle / fireRate;
-                    shoot_rifle();
-                    if(!isBought)
+                    shoot_gun();
+                    if (isBought)
                     {
-                        DoubleBulletRifle();
+                        DoubleBulletPistol();
                     }
                     audioSource.PlayOneShot(shootSound);
+
                 }
 
-                
+                if (Input.GetMouseButtonUp(0))
+                {
+                    animator.SetBool("isGunShooting", false);
+                }
+
             }
-            animator.SetBool("isRiffleShooting", false);
-        }
-        else if (!rifle)
-        {
-            animator.SetBool("haveRifle", false);
-        }
-        if(flame)
-        {
-            if (Input.GetMouseButton(0))
+            if (rifle)
             {
-                Instantiate(flameParticle, transform.position, Quaternion.identity);
-                audioSource.PlayOneShot(shootSound);
+                animator.SetBool("haveRifle", true);
+                if (Input.GetMouseButton(0))
+                {
+                    if (Time.time > ReadyForTheNextShot)
+                    {
+
+                        animator.SetBool("haveRifle", true);
+                        ReadyForTheNextShot = Time.time + fireRateRifle / fireRate;
+                        shoot_rifle();
+                        if (!isBought)
+                        {
+                            DoubleBulletRifle();
+                        }
+                        audioSource.PlayOneShot(shootSound);
+                    }
+
+
+                }
+                animator.SetBool("isRiffleShooting", false);
+            }
+            else if (!rifle)
+            {
+                animator.SetBool("haveRifle", false);
+            }
+            if (flame)
+            {
+                if (Input.GetMouseButton(0))
+                {
+                    Instantiate(flameParticle, transform.position, Quaternion.identity);
+                    audioSource.PlayOneShot(shootSound);
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.V))
+            {
+                animator.SetBool("isKnife", true);
+            }
+
+            if (Input.GetKeyUp(KeyCode.V))
+            {
+                animator.SetBool("isKnife", false);
             }
         }
-
-        if(Input.GetKeyDown(KeyCode.V))
-        {
-            animator.SetBool("isKnife", true);
-        }
-
-        if(Input.GetKeyUp(KeyCode.V))
-        {
-            animator.SetBool("isKnife", false);
-        }
+        
         
     }
 

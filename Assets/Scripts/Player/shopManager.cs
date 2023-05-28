@@ -68,13 +68,13 @@ public class shopManager : MonoBehaviour
 
     public void buyFireRateRifle(Attack attack)
     {
-        if (score.gold >= 300)
+        if (score.gold >= 150)
         {
-            if (attack.fireRateRifle >= 0.5)
+            if (attack.fireRateRifle >= 0.35)
             {
 
-                attack.fireRateRifle -= 0.1f;
-                ScoreManager.instance.LoseGold(250);
+                attack.fireRateRifle -= 0.05f;
+                ScoreManager.instance.LoseGold(150);
             }
             else
                 Destroy(buttonFireRate);
