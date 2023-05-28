@@ -22364,6 +22364,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 564147794}
+    - target: {fileID: 1301129163, guid: 2dcbb1af21e71944f9179799c272522b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2004363423}
+    - target: {fileID: 1301129163, guid: 2dcbb1af21e71944f9179799c272522b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyDoubleShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301129163, guid: 2dcbb1af21e71944f9179799c272522b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 564147794}
     - target: {fileID: 256436782319856671, guid: 2dcbb1af21e71944f9179799c272522b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
