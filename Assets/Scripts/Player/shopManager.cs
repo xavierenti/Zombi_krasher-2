@@ -28,13 +28,13 @@ public class shopManager : MonoBehaviour
             if (IsShopOpen)
             {
                 shopMenu.SetActive(false);
-
+                Cursor.visible = false;
                 IsShopOpen = false;
             }
             else
             {
                 shopMenu.SetActive(true);
-
+                Cursor.visible = true;
                 IsShopOpen = true;
             }
         }
@@ -98,7 +98,7 @@ public class shopManager : MonoBehaviour
     {
         if (score.gold >= 1500)
         {
-            pm.speed += 0.25f;
+            pm.speed += 0.5f;
             ScoreManager.instance.LoseGold(1500);
         }
     }
@@ -117,7 +117,7 @@ public class shopManager : MonoBehaviour
     {
         if(score.gold >= 2500)
         {
-            at.bulletSpeed += 0.1f;
+            at.bulletSpeed += 0.2f;
             ScoreManager.instance.LoseGold(2500);
         }
     }

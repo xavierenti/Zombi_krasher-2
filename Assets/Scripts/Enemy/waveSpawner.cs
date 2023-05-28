@@ -13,12 +13,14 @@ public class waveSpawner : MonoBehaviour
     {
         public string name;
         public Transform enemy;
+        public Transform enemy2;
         public int count;
         public float rate;
     }
 
     public GameObject textShop;
-   
+
+    public EnemyDamage ed;
 
     public Wave[] waves;
     private int nextWave = 0;
@@ -84,7 +86,10 @@ public class waveSpawner : MonoBehaviour
 
         else
         {
+            
             nextWave++;
+            ed.enemyHP += 0.25f;
+
         }
     }
 
@@ -113,6 +118,7 @@ public class waveSpawner : MonoBehaviour
         for(int i = 0; i < _wave.count; i++)
         {
             SpawnEnemy(_wave.enemy);
+            SpawnEnemy(_wave.enemy2);
             yield return new WaitForSeconds(1f/_wave.rate);
         }
 

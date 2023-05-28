@@ -27,6 +27,7 @@ public class PlayerHp : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;    
         playerHP = 1;
         death.SetActive(false);
     }

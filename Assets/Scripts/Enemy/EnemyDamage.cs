@@ -5,7 +5,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyDamage : MonoBehaviour
 {
-    public int enemyHP;
+    public float enemyHP;
 
     private bool damaged;
 

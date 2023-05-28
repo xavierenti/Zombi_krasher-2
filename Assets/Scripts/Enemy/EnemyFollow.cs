@@ -26,7 +26,5 @@ public class EnemyFollow : MonoBehaviour
         Vector3 direction = player.transform.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle + 90;
-        direction.Normalize();
-        movement = direction;
     }
 }
