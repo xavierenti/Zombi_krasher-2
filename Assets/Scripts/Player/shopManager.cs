@@ -124,10 +124,10 @@ public class shopManager : MonoBehaviour
 
     public void BuyDoubleShoot(Attack at)
     {
-        if(score.gold >= 1)
+        if(score.gold >= 15000)
         {
             at.isBought = true;
-            ScoreManager.instance.LoseGold(1);
+            ScoreManager.instance.LoseGold(15000);
         }
     }
 }
