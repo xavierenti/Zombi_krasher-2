@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7634a7e6fdc10e14f956f17004ebc5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHP: 3
+  enemyHP: 7
   deathSound: {fileID: 8300000, guid: 3e4bd25fe1a29aa4fb437d732db00b9d, type: 3}
   called: 0
   death: 0
@@ -339,6 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e7087cd48fda642b649021fc24b38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   player: {fileID: 0}
 --- !u!114 &6891884022735974719
 MonoBehaviour:
