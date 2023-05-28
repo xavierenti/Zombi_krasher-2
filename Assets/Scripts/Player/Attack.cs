@@ -34,6 +34,7 @@ public class Attack : MonoBehaviour
     public bool rifle = false;
 
     public bool flame = false;
+
     public float fireRateRifle = 1;
     public float fireRatePistol = 0.35f;
 
@@ -90,7 +91,7 @@ public class Attack : MonoBehaviour
                         animator.SetBool("haveRifle", true);
                         ReadyForTheNextShot = Time.time + fireRateRifle / fireRate;
                         shoot_rifle();
-                        if (!isBought)
+                        if (isBought)
                         {
                             DoubleBulletRifle();
                         }

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &283889427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 283889428}
+  m_Layer: 0
+  m_Name: weapon (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &283889428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283889427}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.74, y: -3.96, z: -0.18752466}
+  m_LocalScale: {x: 1.8581355, y: 1.8581355, z: 1.8581352}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6608314469742738078}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1892825870
 GameObject:
   m_ObjectHideFlags: 0
@@ -29,7 +60,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6608314469742738078}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &6608314468081628192
 GameObject:
@@ -196,6 +227,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6608314469750290751}
+  - {fileID: 283889428}
   - {fileID: 1892825871}
   m_Father: {fileID: 7292804461649509653}
   m_RootOrder: 0
@@ -403,17 +435,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 6608314469750290751}
-  secondWeapon: {fileID: 1892825871}
+  secondWeapon: {fileID: 283889428}
   Bullet: {fileID: 4117332351383334684, guid: 196df67e7bd023349897309cc6f52e31, type: 3}
   bullet_rifle: {fileID: 6872667456945551624, guid: d2a1f6574755f3d47ac84879faba561c, type: 3}
   flameParticle: {fileID: 7539217109671173339, guid: ddc67ca029b405d47806646536873478, type: 3}
-  shootSound: {fileID: 8300000, guid: 2accb7194bdce4644974cd62dd5b0e74, type: 3}
+  pause: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: a32f08c52eee81245adaabde73773c13, type: 3}
   flameSound: {fileID: 0}
   fireRate: 4
   pistol: 1
   rifle: 0
   flame: 0
   fireRateRifle: 1
+  fireRatePistol: 0.35
   criticInstaKill: 0
   isBought: 0
   bulletSpeed: 20
@@ -471,7 +505,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6608314469750290750}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.73999983, y: -1.9700022, z: -0.18752466}
+  m_LocalPosition: {x: -0.74, y: -1.71, z: -0.18752466}
   m_LocalScale: {x: 1.8581355, y: 1.8581355, z: 1.8581352}
   m_ConstrainProportionsScale: 0
   m_Children: []
