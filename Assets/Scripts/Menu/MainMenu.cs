@@ -5,10 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    
+    public GameObject levelSelect;
+    public GameObject optionMenu;
+
+    private void Start()
+    {
+        levelSelect.SetActive(false);
+        optionMenu.SetActive(false);
+    }
     public void Play()
     {
-        SceneManager.LoadScene("Prueba");
+        levelSelect.SetActive(true);
     }
     public void EscenaOpciones()
     {
@@ -22,5 +29,16 @@ public class MainMenu : MonoBehaviour
     public void Salir()
     {
         Application.Quit();
+    }
+
+    public void Menu()
+    {
+        levelSelect.SetActive(false);
+        optionMenu.SetActive(false);
+    }
+
+    public void OpenOption()
+    {
+        optionMenu.SetActive(true);
     }
 }
