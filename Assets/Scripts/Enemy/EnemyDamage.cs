@@ -40,11 +40,13 @@ public class EnemyDamage : MonoBehaviour
 
     private bool hasSanguinary;
 
+    private Animator animator;
+
     [SerializeField] int experience_reward = 400;
 
     private void Start()
     {
-
+        animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
 
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
