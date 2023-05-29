@@ -127,7 +127,8 @@ public class EnemyDamage : MonoBehaviour
 
                 if (enemyHP <= 0)
                 {
-
+                    animator.SetBool("Death", true);
+                    new WaitForSeconds(1f);
                     Destroy(gameObject);
                     ScoreManager.instance.AddPoint();
                     ScoreManager.instance.AddGold();

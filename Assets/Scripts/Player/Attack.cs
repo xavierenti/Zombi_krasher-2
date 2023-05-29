@@ -36,7 +36,7 @@ public class Attack : MonoBehaviour
     public bool flame = false;
 
     public float fireRateRifle = 1;
-    public float fireRatePistol = 0.35f;
+    public float fireRatePistol = 0.5f;
 
     public float criticInstaKill = 0f;
 

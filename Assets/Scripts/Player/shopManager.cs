@@ -9,6 +9,7 @@ public class shopManager : MonoBehaviour
 
     public GameObject shopMenu;
     public GameObject buttonBuyGun;
+    public GameObject buttonBuydobelShot;
     public GameObject buttonFireRate;
     public GameObject player;
     public GameObject[] enemy;
@@ -127,6 +128,7 @@ public class shopManager : MonoBehaviour
         if(score.gold >= 15000)
         {
             at.isBought = true;
+            Destroy(buttonBuydobelShot);
             ScoreManager.instance.LoseGold(15000);
         }
     }

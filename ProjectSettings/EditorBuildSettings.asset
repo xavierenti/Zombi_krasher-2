@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Desierto Dificil.unity
     guid: 956aac086198e6a4d9e5db5dafbf4848
+  - enabled: 1
+    path: Assets/Scenes/Practicas.unity
+    guid: af91f40772b3af94d9e6485bb0281e9f
   m_configObjects: {}
