@@ -20,7 +20,7 @@ public class EnemyDamage : MonoBehaviour
     public bool called;
     bool hasPatrolScript;
     [HideInInspector]
-    public bool death;
+    public bool death = false;
     [HideInInspector]
     public bool decreaseSpeed;
 
@@ -51,6 +51,7 @@ public class EnemyDamage : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
 
+        
 
         player = GameObject.Find("Player");
         playerDamage = player.GetComponent<PlayerDamage>();
@@ -124,10 +125,8 @@ public class EnemyDamage : MonoBehaviour
 
                 if (enemyHP <= 0)
                 {
-                    Instantiate(bloodPrefab, transform.position, Quaternion.identity);
 
                     Destroy(gameObject);
-                    Instantiate(blood, transform.position, Quaternion.identity);
                     ScoreManager.instance.AddPoint();
                     ScoreManager.instance.AddGold();
 
@@ -139,34 +138,19 @@ public class EnemyDamage : MonoBehaviour
 
         if (other.CompareTag("bullet_rifle"))
         {
-
-
-            //if (Random.Range(1, 101) == attack.criticInstaKill)
-            //{
-            //    Instantiate(bloodPrefab, transform.position, Quaternion.identity);
-
-            //    Destroy(gameObject);
-            //    Instantiate(blood, transform.position, Quaternion.identity);
-            //    ScoreManager.instance.AddPoint();
-            //    ScoreManager.instance.AddGold();
-            //}
-
-
-            //else
-            //{
                 enemyHP -= 2;
 
                 if (enemyHP <= 0)
                 {
 
                     Destroy(gameObject);
+                    death = true;
                     Instantiate(blood, transform.position, Quaternion.identity);
                     ScoreManager.instance.AddPoint();
                     ScoreManager.instance.AddGold();
 
 
                 }
-            //}
         }
     }
 

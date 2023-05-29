@@ -48,9 +48,9 @@ public class Pause : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void Restart(GameObject idk)
+    public void Restart(string nombreNivel)
     {
-        SceneManager.LoadScene("Prueba");
+        SceneManager.LoadScene(nombreNivel);
         Time.timeScale = 1f;
         IsPaused = false;
     }
@@ -64,8 +64,8 @@ public class Pause : MonoBehaviour
         idk.SetActive(false);
     }
 
-    public void ExitGame()
+    public void ExitGame(string nombreNivel)
     {
-        Application.Quit();
+        SceneManager.LoadScene(nombreNivel);
     }
 }

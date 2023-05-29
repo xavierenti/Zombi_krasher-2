@@ -110,13 +110,14 @@ public class PlayerHp : MonoBehaviour
             if (inmortal == false)
             {
                 playerHP = playerHP - 1;
+                inmortality(duracion);
                 if (playerHP <= 0)
                 {
                     Destroy(gameObject);
                     Time.timeScale = 0f;
                     death.SetActive(true);
                     Cursor.visible = true;
-                    inmortality(duracion);
+                    
                 }
             }            
         }
