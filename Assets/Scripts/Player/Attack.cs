@@ -2,10 +2,12 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Attack : MonoBehaviour
 {
-    
+    public Text fireRat;
+
     public Transform weapon;
     public Transform secondWeapon;
     
@@ -58,7 +60,8 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!pause.IsPaused)
+        fireRat.text = "Fire Rate: " + fireRate.ToString(); 
+        if (!pause.IsPaused)
         {
             if (pistol)
             {
