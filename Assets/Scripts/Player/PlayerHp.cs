@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Windows;
+using System.Collections;
 
 public class PlayerHp : MonoBehaviour
 {
@@ -16,9 +17,12 @@ public class PlayerHp : MonoBehaviour
     public Image Image3;
     public Image Image4;
     public Image Image5;
+    public Image Blod1;
+
 
     bool inmortal = false;
     float duracion = 100000000f;
+    float duracion2 = 3f;
 
     //private bool damaged;
     private float timer;
@@ -27,6 +31,7 @@ public class PlayerHp : MonoBehaviour
 
     private void Start()
     {
+        Blod1.enabled = false;
         Time.timeScale = 1f;    
         death.SetActive(false);
     }
@@ -82,6 +87,9 @@ public class PlayerHp : MonoBehaviour
             Image5.enabled = true;
         }
 
+            
+
+
 
         //if (damaged)
         //{
@@ -103,6 +111,10 @@ public class PlayerHp : MonoBehaviour
             {
                 playerHP = playerHP - 1;
                 inmortality(duracion);
+
+
+                
+               
                 if (playerHP <= 0)
                 {
                     Destroy(gameObject);
@@ -119,7 +131,10 @@ public class PlayerHp : MonoBehaviour
     private void inmortality(float invencibiliti)
     {
         inmortal = true;
+        
         new WaitForSeconds(invencibiliti);
+
         inmortal = false;
     }
+
 }
