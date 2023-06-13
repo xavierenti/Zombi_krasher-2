@@ -44,6 +44,8 @@ public class EnemyDamage : MonoBehaviour
 
     [SerializeField] int experience_reward = 400;
 
+    public GameObject X2dmgGO;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -154,6 +156,21 @@ public class EnemyDamage : MonoBehaviour
 
 
                 }
+        }
+
+        
+    }
+
+    void X2Bonificator()
+    {
+        
+    }
+
+    public void X2dmg()
+    {
+       if(death)
+        {
+            Instantiate(X2dmgGO, transform.position, Quaternion.identity);
         }
     }
 
