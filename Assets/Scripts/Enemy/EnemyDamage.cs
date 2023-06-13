@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody2D))]
@@ -11,6 +12,10 @@ public class EnemyDamage : MonoBehaviour
 
     private float timer;
 
+
+    public float dmg_pistol = 1;
+
+    public bool x2dmg_Activated;
 
     private SpriteRenderer spriteRenderer;
 
@@ -30,7 +35,8 @@ public class EnemyDamage : MonoBehaviour
 
     private GameObject player;
     private PlayerDamage playerDamage;
-    private Attack attack;
+     Attack attack;
+    Bonificators bonificators;
 
     public Text text;
     public float startingKills = 0;
@@ -45,6 +51,8 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField] int experience_reward = 400;
 
     public GameObject X2dmgGO;
+    public GameObject X2goldGO;
+    public GameObject DoubleBulletGO;
 
     private void Start()
     {
@@ -114,24 +122,14 @@ public class EnemyDamage : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
 
-            //if (Random.Range(1, 101) == attack.criticInstaKill)
-            //{
-            //    Instantiate(bloodPrefab, transform.position, Quaternion.identity);
-
-            //    Destroy(gameObject);
-            //    Instantiate(blood, transform.position, Quaternion.identity);
-            //    ScoreManager.instance.AddPoint();
-            //    ScoreManager.instance.AddGold();
-            //}
-            //else
-            //{
-                enemyHP--;
+                enemyHP -= dmg_pistol;
 
                 if (enemyHP <= 0)
                 {
                     animator.SetBool("Death", true);
                     new WaitForSeconds(1f);
                     Destroy(gameObject);
+                    RandomBonificator();
                     ScoreManager.instance.AddPoint();
                     ScoreManager.instance.AddGold();
 
@@ -143,14 +141,15 @@ public class EnemyDamage : MonoBehaviour
 
         if (other.CompareTag("bullet_rifle"))
         {
-                enemyHP -= 2;
+                enemyHP -= attack.dmb_rifle;
 
                 if (enemyHP <= 0)
                 {
 
                     Destroy(gameObject);
                     death = true;
-                    Instantiate(blood, transform.position, Quaternion.identity);
+                    
+                    RandomBonificator();
                     ScoreManager.instance.AddPoint();
                     ScoreManager.instance.AddGold();
 
@@ -161,16 +160,21 @@ public class EnemyDamage : MonoBehaviour
         
     }
 
-    void X2Bonificator()
+    void RandomBonificator()
     {
-        
-    }
+        int RandomNum = Random.Range(10, 10);
 
-    public void X2dmg()
-    {
-       if(death)
+        if (RandomNum == 10)
         {
             Instantiate(X2dmgGO, transform.position, Quaternion.identity);
+        }
+        if(RandomNum == 20)
+        {
+            Instantiate(X2goldGO, transform.position, Quaternion.identity);
+        }
+        if(RandomNum == 30)
+        {
+            Instantiate(DoubleBulletGO, transform.position, Quaternion.identity);
         }
     }
 

@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - object
   - bullet_rifle
+  - bonificator_x2dmg
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,7 @@ public class PlayerDamage : MonoBehaviour
     private float timer;
 
     private int maxHP;
+    
 
     void Update()
     {
@@ -55,5 +56,7 @@ public class PlayerDamage : MonoBehaviour
             hpImage.fillAmount = playerHP * 0.1f;
             //damaged = true;
         }
+
+
     }
 }

@@ -25,6 +25,9 @@ public class PlayerHp : MonoBehaviour
 
     private int maxHP;
 
+    Bonificators bonificators;
+    public GameObject x2dmgPrefab;
+
     private void Start()
     {
         Time.timeScale = 1f;    
@@ -95,14 +98,6 @@ public class PlayerHp : MonoBehaviour
         //}
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-           
-        }
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider.CompareTag("Enemy"))
@@ -121,6 +116,8 @@ public class PlayerHp : MonoBehaviour
                 }
             }            
         }
+
+
     }
     private void inmortality(float invencibiliti)
     {
