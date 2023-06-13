@@ -25,9 +25,6 @@ public class PlayerHp : MonoBehaviour
 
     private int maxHP;
 
-    Bonificators bonificators;
-    public GameObject x2dmgPrefab;
-
     private void Start()
     {
         Time.timeScale = 1f;    

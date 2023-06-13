@@ -9,6 +9,8 @@ TagManager:
   - object
   - bullet_rifle
   - bonificator_x2dmg
+  - bonificator_x2gold
+  - bon_freecash
   layers:
   - Default
   - TransparentFX

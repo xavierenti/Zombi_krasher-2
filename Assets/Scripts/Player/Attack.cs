@@ -27,7 +27,7 @@ public class Attack : MonoBehaviour
 
     private Animator animator;
 
-    public int dmb_pistol = 1;
+    public int dmg_pistol = 1;
     public int dmb_rifle = 2;
 
     public float fireRate;

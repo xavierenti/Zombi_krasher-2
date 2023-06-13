@@ -1,24 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bonificators : MonoBehaviour
 {
-    Attack attack;
-    public EnemyDamage enemyDamage;
-    ScoreManager scoreManager;
 
-    private void Start()
-    {
-        attack = GetComponent<Attack>();
-        enemyDamage = GetComponent<EnemyDamage>();
-    }
 
-    public void x2dmg()
+
+    public ScoreManager scoreManager;
+    public void freeCash()
     {
-        enemyDamage.dmg_pistol = 100;
-        enemyDamage.x2dmg_Activated = true;
-        attack.dmb_rifle = 4;
+        scoreManager.gold += 100;
+        scoreManager.AddGold();
     }
 
     public void x2gold()

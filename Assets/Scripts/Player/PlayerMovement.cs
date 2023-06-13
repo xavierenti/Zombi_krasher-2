@@ -12,10 +12,6 @@ public class PlayerMovement : MonoBehaviour, IShopCostumer
     Vector2 movement;
     Vector2 mousePos;
 
-    Bonificators bonificators;
-
-    public GameObject x2dmgPrefab;
-
     private void Update()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -30,10 +26,5 @@ public class PlayerMovement : MonoBehaviour, IShopCostumer
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        
     }
 }

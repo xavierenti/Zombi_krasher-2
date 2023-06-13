@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 7292804461649509644}
   - component: {fileID: 1161374837546819590}
   - component: {fileID: 3348676036125480722}
+  - component: {fileID: 800030484}
   m_Layer: 0
   m_Name: Girl
   m_TagString: Player
@@ -183,13 +184,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9714f2eceba0744998e64c8fd227506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: 4
+  playerHP: 3
   death: {fileID: 0}
   Image1: {fileID: 0}
   Image2: {fileID: 0}
   Image3: {fileID: 0}
   Image4: {fileID: 0}
   Image5: {fileID: 0}
+--- !u!114 &800030484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608314468081628192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c49495fcac5996346807eb83da13bc0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bonificator: {fileID: 0}
 --- !u!1 &6608314469742738069
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 704aa69aa18894b488080ca13f157071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireRat: {fileID: 0}
   weapon: {fileID: 6608314469750290751}
   secondWeapon: {fileID: 283889428}
   Bullet: {fileID: 4117332351383334684, guid: 196df67e7bd023349897309cc6f52e31, type: 3}
@@ -442,6 +457,8 @@ MonoBehaviour:
   pause: {fileID: 0}
   shootSound: {fileID: 8300000, guid: a32f08c52eee81245adaabde73773c13, type: 3}
   flameSound: {fileID: 0}
+  dmg_pistol: 1
+  dmb_rifle: 2
   fireRate: 4
   pistol: 1
   rifle: 0

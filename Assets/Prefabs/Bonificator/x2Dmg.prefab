@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3765069077320913650}
   m_Layer: 0
   m_Name: x2Dmg
-  m_TagString: bonificator_x2dmg
+  m_TagString: bonificator_x2gold
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

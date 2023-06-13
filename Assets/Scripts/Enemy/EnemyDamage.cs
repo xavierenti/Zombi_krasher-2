@@ -34,8 +34,6 @@ public class EnemyDamage : MonoBehaviour
     private Rigidbody2D rb;
 
     private GameObject player;
-    private PlayerDamage playerDamage;
-     Attack attack;
     Bonificators bonificators;
 
     public Text text;
@@ -56,6 +54,7 @@ public class EnemyDamage : MonoBehaviour
 
     private void Start()
     {
+        dmg_pistol = 1;
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
 
@@ -66,7 +65,6 @@ public class EnemyDamage : MonoBehaviour
         
 
         player = GameObject.Find("Player");
-        playerDamage = player.GetComponent<PlayerDamage>();
 
         currentKills = startingKills;
     }
@@ -122,7 +120,7 @@ public class EnemyDamage : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
 
-                enemyHP -= dmg_pistol;
+                enemyHP --;
 
                 if (enemyHP <= 0)
                 {
@@ -141,7 +139,7 @@ public class EnemyDamage : MonoBehaviour
 
         if (other.CompareTag("bullet_rifle"))
         {
-                enemyHP -= attack.dmb_rifle;
+                enemyHP -= 2;
 
                 if (enemyHP <= 0)
                 {
@@ -162,13 +160,13 @@ public class EnemyDamage : MonoBehaviour
 
     void RandomBonificator()
     {
-        int RandomNum = Random.Range(10, 10);
+        int RandomNum = Random.Range(10, 12);
 
         if (RandomNum == 10)
         {
             Instantiate(X2dmgGO, transform.position, Quaternion.identity);
         }
-        if(RandomNum == 20)
+        if(RandomNum == 11)
         {
             Instantiate(X2goldGO, transform.position, Quaternion.identity);
         }

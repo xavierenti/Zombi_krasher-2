@@ -199,6 +199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHP: 5
+  dmg_pistol: 1
+  x2dmg_Activated: 0
   deathSound: {fileID: 8300000, guid: 3e4bd25fe1a29aa4fb437d732db00b9d, type: 3}
   called: 0
   death: 0
@@ -209,6 +211,9 @@ MonoBehaviour:
   currentKills: 0
   blood: {fileID: 452305988528590661, guid: 358f47cd88b770948a366b413fdce0ad, type: 3}
   experience_reward: 400
+  X2dmgGO: {fileID: 980445477661057993, guid: 8e5d3afbc92307b43b5193cde18fad77, type: 3}
+  X2goldGO: {fileID: 5694131106224016291, guid: e93d0d1ebb4f8cd468933459020e3aca, type: 3}
+  DoubleBulletGO: {fileID: 0}
 --- !u!82 &3805541968330605787
 AudioSource:
   m_ObjectHideFlags: 0
