@@ -847,28 +847,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 409101553}
     m_Modifications:
     - target: {fileID: 3455661778674992482, guid: 35803efce29878e44a3ba533db17cf3d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3455661778674992482, guid: 35803efce29878e44a3ba533db17cf3d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 576966811}
-    - target: {fileID: 3455661778674992482, guid: 35803efce29878e44a3ba533db17cf3d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 3455661778674992482, guid: 35803efce29878e44a3ba533db17cf3d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenu, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 3455661778897403482, guid: 35803efce29878e44a3ba533db17cf3d, type: 3}
       propertyPath: m_Name
       value: Canvas (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3455661778897403482, guid: 35803efce29878e44a3ba533db17cf3d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3455661778897403487, guid: 35803efce29878e44a3ba533db17cf3d, type: 3}
       propertyPath: m_Pivot.x
@@ -953,6 +937,12 @@ PrefabInstance:
     - target: {fileID: 3455661778897403487, guid: 35803efce29878e44a3ba533db17cf3d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3455661778956064145, guid: 35803efce29878e44a3ba533db17cf3d, type: 3}
+      propertyPath: m_text
+      value: 'Easy
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35803efce29878e44a3ba533db17cf3d, type: 3}

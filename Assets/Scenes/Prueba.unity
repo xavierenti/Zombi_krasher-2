@@ -410,10 +410,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 584569142, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5579567048549203988, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -462,28 +458,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Respawn (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: time
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: timer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: Retime
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: enemy.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
 --- !u!4 &445967399 stripped
 Transform:
@@ -620,10 +595,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 584569142, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5579567048549203988, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -672,28 +643,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Respawn (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: time
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: timer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: Retime
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: enemy.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
 --- !u!4 &711682703 stripped
 Transform:
@@ -707,10 +657,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 584569142, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5579567048549203988, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -759,24 +705,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Respawn (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: timer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: Retime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: enemy.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
 --- !u!4 &712427557 stripped
 Transform:
@@ -1021,10 +950,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 584569142, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5579567048549203988, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1073,28 +998,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Respawn (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: time
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: timer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: Retime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: enemy.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
 --- !u!4 &1259896792 stripped
 Transform:
@@ -1368,10 +1272,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 584569142, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5579567048549203988, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -1420,24 +1320,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Respawn (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: timer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: Retime
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: enemy.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
 --- !u!4 &2017622682 stripped
 Transform:
@@ -1519,10 +1402,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 584569142, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5579567048549203988, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1571,24 +1450,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Respawn (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: timer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: Retime
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
-      propertyPath: enemy.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5579567048549203991, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb77ae6345a051b48a9a64a32440ad0e, type: 3}
 --- !u!4 &2126818789 stripped
 Transform:
@@ -2221,7 +2083,7 @@ PrefabInstance:
     - target: {fileID: 4477221446578178953, guid: 9c690560469dfc340be40d0218b6e534, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2004363419}
+      objectReference: {fileID: 868528753403777508}
     - target: {fileID: 4477221446578178953, guid: 9c690560469dfc340be40d0218b6e534, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: MainMenu
