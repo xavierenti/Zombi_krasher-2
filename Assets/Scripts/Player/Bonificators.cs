@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Bonificators : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class Bonificators : MonoBehaviour
 
     public bool x2gold_activated = false;
     public bool doubleBullet_activated = false;
+
+    [SerializeField] Text x2Gold;
+    [SerializeField] Text x2Bullet;
 
     public Attack attack;
 
@@ -25,7 +29,9 @@ public class Bonificators : MonoBehaviour
 
     private void Update()
     {
-        
+        x2Gold.text = currentTime_gold.ToString("0");
+        x2Bullet.text = currentTime_bullet.ToString("0");
+
         
 
         if(x2gold_activated)

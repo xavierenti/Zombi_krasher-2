@@ -162,15 +162,15 @@ public class EnemyDamage : MonoBehaviour
     {
         int RandomNum = Random.Range(1, 25);
 
-        if (RandomNum == 10)
+        if (RandomNum == 2 || RandomNum == 5 || RandomNum == 10 || RandomNum == 20 || RandomNum == 24 || RandomNum == 16 || RandomNum == 17)
         {
             Instantiate(X2dmgGO, transform.position, Quaternion.identity);
         }
-        if(RandomNum == 11)
+        if(RandomNum == 13)
         {
             Instantiate(X2goldGO, transform.position, Quaternion.identity);
         }
-        if(RandomNum == 12)
+        if(RandomNum == 7)
         {
             Instantiate(DoubleBulletGO, transform.position, Quaternion.identity);
         }

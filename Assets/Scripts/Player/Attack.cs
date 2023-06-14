@@ -60,7 +60,7 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fireRat.text = "Fire Rate: " + fireRate.ToString(); 
+        fireRat.text = "Fire Rate: " + fireRateRifle.ToString("0.00"); 
         if (!pause.IsPaused)
         {
             if (pistol)
