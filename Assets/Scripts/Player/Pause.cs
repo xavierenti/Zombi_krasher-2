@@ -5,30 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-
     public bool IsPaused = false;
     public GameObject pauseMenu;
-    
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         pauseMenu.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (IsPaused)
             {
-                pauseMenu.SetActive(false);
-                ResumeGame(pauseMenu);
+                ResumeGame();
             }
             else
             {
-                pauseMenu.SetActive(true);
                 PauseGame();
             }
         }
@@ -41,11 +35,12 @@ public class Pause : MonoBehaviour
         IsPaused = true;
         Cursor.visible = true;
     }
-    public void ResumeGame(GameObject idk)
+
+    public void ResumeGame()
     {
+        pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         IsPaused = false;
-        idk.SetActive(false);
         Cursor.visible = false;
     }
 
@@ -56,11 +51,12 @@ public class Pause : MonoBehaviour
         IsPaused = false;
     }
 
-    public void Controls (GameObject idk)
+    public void Controls(GameObject idk)
     {
         idk.SetActive(true);
     }
-    public void exitControls(GameObject idk)
+
+    public void ExitControls(GameObject idk)
     {
         idk.SetActive(false);
     }

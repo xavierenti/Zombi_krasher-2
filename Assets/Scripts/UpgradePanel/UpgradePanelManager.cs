@@ -5,13 +5,11 @@ using UnityEngine;
 public class UpgradePanelManager : MonoBehaviour
 {
     [SerializeField] GameObject panel;
-    Pause pause;
 
     [SerializeField] List<UpgradeButton> upgradeButtons;
     
     private void Awake()
     {
-        pause = GetComponent<Pause>();
     }
 
     private void Start()
@@ -22,8 +20,6 @@ public class UpgradePanelManager : MonoBehaviour
     public void OpenPanel(List<UpgradeData> upgradeDatas)
     {
         Clean();
-        pause.PauseGame();
-        panel.SetActive(true);
 
         
 
@@ -52,8 +48,6 @@ public class UpgradePanelManager : MonoBehaviour
     public void ClosePanel()
     {
         HideButtons();
-
-        pause.ResumeGame(panel);
         panel.SetActive(false);
     }
 
