@@ -16,12 +16,14 @@ public class CollisionP : MonoBehaviour
 
         if (collision.CompareTag("bonificator_x2gold"))
         {
-            bonificator.x2gold_activated = true;   
+            bonificator.x2gold_activated = true;
+            bonificator.currentTime_gold = 10f;
         }
 
         if(collision.CompareTag("bon_doubleBullet"))
         {
             bonificator.doubleBullet_activated = true;
+            bonificator.currentTime_bullet = 10f;
         }
     }
 }

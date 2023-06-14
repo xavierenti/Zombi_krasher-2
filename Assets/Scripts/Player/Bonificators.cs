@@ -25,6 +25,9 @@ public class Bonificators : MonoBehaviour
     {
         currentTime_bullet = maxTime;
         currentTime_gold = maxTime;
+
+        x2Gold.enabled = false;
+        x2Bullet.enabled = false;
     }
 
     private void Update()
@@ -56,13 +59,14 @@ public class Bonificators : MonoBehaviour
 
     public void x2gold()
     {
-
+        x2Gold.enabled = true;
         currentTime_gold -= Time.deltaTime;
         scoreManager.goldGains = 50;
         if (currentTime_gold <= 0)
         {
             scoreManager.goldGains = 25;
             x2gold_activated = false;
+            x2Gold.enabled = false;
             currentTime_gold = maxTime;
         }
     }
@@ -70,12 +74,15 @@ public class Bonificators : MonoBehaviour
     public void DoubleBullet()
     {
         
+        x2Bullet.enabled = true;
         currentTime_bullet -= Time.deltaTime;
         attack.isBought = true;
         if (currentTime_bullet <= 0)
         {
+            
             attack.isBought = false;
             doubleBullet_activated = false;
+            x2Bullet.enabled = false;
             currentTime_bullet = maxTime;
         }
         
