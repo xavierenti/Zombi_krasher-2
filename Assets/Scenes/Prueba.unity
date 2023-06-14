@@ -2086,11 +2086,11 @@ PrefabInstance:
       objectReference: {fileID: 868528753403777508}
     - target: {fileID: 4477221446578178953, guid: 9c690560469dfc340be40d0218b6e534, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Restart
+      value: CambiaeNivel
       objectReference: {fileID: 0}
     - target: {fileID: 4477221446578178953, guid: 9c690560469dfc340be40d0218b6e534, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Pause, Assembly-CSharp
+      value: LevelSelection, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4477221446578178953, guid: 9c690560469dfc340be40d0218b6e534, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
