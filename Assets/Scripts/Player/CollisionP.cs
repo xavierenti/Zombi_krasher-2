@@ -18,5 +18,10 @@ public class CollisionP : MonoBehaviour
         {
             bonificator.x2gold();   
         }
+
+        if(collision.CompareTag("bon_doubleBullet"))
+        {
+            bonificator.DoubleBullet();
+        }
     }
 }

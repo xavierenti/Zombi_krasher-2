@@ -160,7 +160,7 @@ public class EnemyDamage : MonoBehaviour
 
     void RandomBonificator()
     {
-        int RandomNum = Random.Range(10, 12);
+        int RandomNum = Random.Range(10, 13);
 
         if (RandomNum == 10)
         {
@@ -170,7 +170,7 @@ public class EnemyDamage : MonoBehaviour
         {
             Instantiate(X2goldGO, transform.position, Quaternion.identity);
         }
-        if(RandomNum == 30)
+        if(RandomNum == 12)
         {
             Instantiate(DoubleBulletGO, transform.position, Quaternion.identity);
         }

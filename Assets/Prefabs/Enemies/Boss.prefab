@@ -214,7 +214,7 @@ MonoBehaviour:
   experience_reward: 400
   X2dmgGO: {fileID: 980445477661057993, guid: 8e5d3afbc92307b43b5193cde18fad77, type: 3}
   X2goldGO: {fileID: 5694131106224016291, guid: e93d0d1ebb4f8cd468933459020e3aca, type: 3}
-  DoubleBulletGO: {fileID: 0}
+  DoubleBulletGO: {fileID: 7334592078050063718, guid: f167bccb50a1a794898045d60f88bf39, type: 3}
 --- !u!82 &1904946236344774840
 AudioSource:
   m_ObjectHideFlags: 0

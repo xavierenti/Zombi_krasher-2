@@ -22,7 +22,6 @@ public class PlayerHp : MonoBehaviour
 
     bool inmortal = false;
     float duracion = 100000000f;
-    float duracion2 = 3f;
 
     //private bool damaged;
     private float timer;
@@ -107,34 +106,38 @@ public class PlayerHp : MonoBehaviour
     {
         if(collision.collider.CompareTag("Enemy"))
         {
-            if (inmortal == false)
-            {
+
                 playerHP = playerHP - 1;
                 inmortality(duracion);
-
-
-                
                
-                if (playerHP <= 0)
+            if (playerHP <= 0)
                 {
                     Destroy(gameObject);
                     Time.timeScale = 0f;
                     death.SetActive(true);
                     Cursor.visible = true;
                     
-                }
-            }            
+                }         
         }
 
 
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.collider.CompareTag("Enemy"))
+        {
+            Blod1.enabled = false;
+        }
+    }
     private void inmortality(float invencibiliti)
     {
-        inmortal = true;
         
+        Blod1.enabled = true;
         new WaitForSeconds(invencibiliti);
+        
 
-        inmortal = false;
+
     }
 
 }

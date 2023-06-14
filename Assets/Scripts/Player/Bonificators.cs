@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Bonificators : MonoBehaviour
 {
 
-
+    public Attack attack;
 
     public ScoreManager scoreManager;
     public void freeCash()
@@ -22,6 +22,6 @@ public class Bonificators : MonoBehaviour
 
     public void DoubleBullet()
     {
-
+        attack.isBought = true;
     }
 }

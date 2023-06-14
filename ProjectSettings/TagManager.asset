@@ -11,6 +11,7 @@ TagManager:
   - bonificator_x2dmg
   - bonificator_x2gold
   - bon_freecash
+  - bon_doubleBullet
   layers:
   - Default
   - TransparentFX
