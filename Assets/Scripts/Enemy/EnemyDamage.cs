@@ -160,7 +160,7 @@ public class EnemyDamage : MonoBehaviour
 
     void RandomBonificator()
     {
-        int RandomNum = Random.Range(10, 13);
+        int RandomNum = Random.Range(1, 25);
 
         if (RandomNum == 10)
         {

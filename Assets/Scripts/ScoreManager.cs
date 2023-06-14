@@ -14,7 +14,7 @@ public class ScoreManager : MonoBehaviour
     int score = 0;
     int highscore = 0;
     public int gold = 0;
-    public int goldGains = 10;
+    public int goldGains = 25;
 
     private void Awake()
     {

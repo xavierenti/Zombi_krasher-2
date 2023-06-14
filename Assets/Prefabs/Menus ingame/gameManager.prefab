@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 868528754087983480}
   - component: {fileID: 868528754087983485}
   - component: {fileID: 868528754087983484}
+  - component: {fileID: 1571032049}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -80,6 +81,26 @@ MonoBehaviour:
   IsShopOpen: 0
   shopMenu: {fileID: 0}
   buttonBuyGun: {fileID: 0}
+  buttonBuydobelShot: {fileID: 0}
   buttonFireRate: {fileID: 0}
   player: {fileID: 0}
+  enemy:
+  - {fileID: 1904946236344774824, guid: bf7186895753ff0468be02ee95c439ee, type: 3}
+  - {fileID: 737837708331343686, guid: 85c98b3dfa6d1cc45be343ff9fa5cab3, type: 3}
+  - {fileID: 3805541968330605763, guid: ebebcc26e249b214f9551228e7f74206, type: 3}
+  - {fileID: 6891884022735974615, guid: b6e43e2a720f5cf47ad1833d0c96ed9c, type: 3}
+  - {fileID: 7563267400167024552, guid: 5bc2c3d81b5d11b49809e5d33da74ca3, type: 3}
+  - {fileID: 4542945654708401590, guid: 72bc0927b62bdd64f8888797fb44ea83, type: 3}
   score: {fileID: 0}
+--- !u!114 &1571032049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868528754087983481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de1ae69152c88c7479c9213ec9c62b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

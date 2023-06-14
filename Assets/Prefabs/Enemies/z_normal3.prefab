@@ -212,7 +212,7 @@ MonoBehaviour:
   blood: {fileID: 452305988528590661, guid: 358f47cd88b770948a366b413fdce0ad, type: 3}
   experience_reward: 400
   X2dmgGO: {fileID: 980445477661057993, guid: 8e5d3afbc92307b43b5193cde18fad77, type: 3}
-  X2goldGO: {fileID: 5694131106224016291, guid: e93d0d1ebb4f8cd468933459020e3aca, type: 3}
+  X2goldGO: {fileID: 6226650426192917063, guid: 34e1c2a7845de1b48aeae6cb3a394561, type: 3}
   DoubleBulletGO: {fileID: 7334592078050063718, guid: f167bccb50a1a794898045d60f88bf39, type: 3}
 --- !u!82 &7563267400167024544
 AudioSource:
