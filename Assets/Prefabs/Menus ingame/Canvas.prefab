@@ -5417,7 +5417,7 @@ MonoBehaviour:
   highscroeText: {fileID: 4616151217151927541}
   goldText: {fileID: 5647471116934144431}
   gold: 0
-  goldGains: 10
+  goldGains: 25
 --- !u!1 &5182176690884861724
 GameObject:
   m_ObjectHideFlags: 0
@@ -6619,7 +6619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5624797780952991990
 RectTransform:
   m_ObjectHideFlags: 0
